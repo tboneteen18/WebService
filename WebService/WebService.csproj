@@ -262,7 +262,6 @@
     <Content Include="Service References\WeatherService\WebService.WeatherService.WeatherReturn.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Views\Home\Weather.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

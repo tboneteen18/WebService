@@ -1,7 +1,6 @@
 ﻿@using WebService.Models
 @model WeatherModel
 @using WebService.Controllers
-@ViewBag.MyList
 
 @{
      ViewBag.Title = "Home Page";
@@ -14,12 +13,11 @@
 </div>
 
 <div class="row">
-    
     @using (@Html.BeginForm("Weather", "Home", FormMethod.Post))
     {
-        @Html.TextBoxFor(m => m.ZipCode, new { id = "txtPlace", placeholder = "Zipcode" })
+        @Html.TextBoxFor(m => m.ZipCode, new { id = "txtPlace", placeholder = "Zipcode"})
 
         <button type="submit" id="btnSave">Save</button>
     }
-    
 </div>
+@ViewBag.MyList

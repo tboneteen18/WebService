@@ -21,7 +21,7 @@ namespace WebService.Controllers
             ViewBag.MyList += " is ";
             ViewBag.MyList += forcast.Temperature.ToString();
             ViewBag.MyList += " Degrees";
-            return View(model);
+            return View("Index", model);
         }
     }
 }
