@@ -16,11 +16,11 @@ namespace WebService.Controllers
         public ActionResult Weather(WeatherModel model)
         {
             var forcast = client.GetCityWeatherByZIP(model.ZipCode);
-            ViewBag.MyList = "the temperature in ";
-            ViewBag.MyList += forcast.City.ToString();
-            ViewBag.MyList += " is ";
-            ViewBag.MyList += forcast.Temperature.ToString();
-            ViewBag.MyList += " Degrees";
+            ViewData["MyList"] = "the temperature in ";
+            ViewData["MyList"] += forcast.City.ToString();
+            ViewData["MyList"] += " is ";
+            ViewData["MyList"] += forcast.Temperature.ToString();
+            ViewData["MyList"] += " Degrees";
             return View("Index", model);
         }
     }
